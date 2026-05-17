@@ -1,8 +1,20 @@
 <div align="center">
 
-<p><strong>Code for paper - "Uncovering the Latent Potential of Deep Intermediate Representations" (ICML 26)</strong></p>
+<br>
 
-<h1>Uncovering the Latent Potential of Deep Intermediate Representations</h1>
+<p>
+  <img alt="ICML 2026 Spotlight" src="https://img.shields.io/badge/ICML%202026%20Spotlight-accepted-6f42c1?style=for-the-badge">
+</p>
+
+
+<h1>
+  Uncovering the Latent Potential of<br>
+  Deep Intermediate Representations
+</h1>
+
+<h3>
+  Layerwise Optimal Embedding Selection for supervised and label-free representation discovery
+</h3>
 
 <p>
   <strong>Arnesh Batra</strong><sup>1</sup> ·
@@ -18,19 +30,20 @@
 </p>
 
 <p>
-  <a href="#"><img alt="arXiv coming soon" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?logo=arxiv&logoColor=white"></a>
-  <a href="https://openreview.net/forum?id=6up1qGJwYZ"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-6up1qGJwYZ-8c1d40"></a>
-  <a href="https://example.com/loes"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-2f80ed"></a>
-  <a href="."><img alt="Code" src="https://img.shields.io/badge/Code-GitHub-181717?logo=github"></a>
-  <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green"></a>
+  <a href="#"><img alt="arXiv coming soon" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
+  <a href="https://openreview.net/forum?id=6up1qGJwYZ"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-paper-8c1d40?style=flat-square"></a>
+  <a href="https://example.com/loes"><img alt="Project Page" src="https://img.shields.io/badge/Project-page-2f80ed?style=flat-square"></a>
+  <a href="."><img alt="Code" src="https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github"></a>
+  <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green?style=flat-square"></a>
 </p>
 
 <p>
-  <img alt="ICML 2026 Spotlight" src="https://img.shields.io/badge/ICML%202026-Spotlight-6f42c1">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-3776ab?logo=python&logoColor=white">
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.1%2B-ee4c2c?logo=pytorch&logoColor=white">
-  <img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-compatible-ffcc4d">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-3776ab?style=flat-square&logo=python&logoColor=white">
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.1%2B-ee4c2c?style=flat-square&logo=pytorch&logoColor=white">
+  <img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-compatible-ffcc4d?style=flat-square">
 </p>
+
+<br>
 
 </div>
 
