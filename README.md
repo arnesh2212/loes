@@ -1,4 +1,5 @@
-Code for paper - "Uncovering the Latent Potential of Deep Intermediate Representations" (ICML 26)
+<p><strong>Code for paper - "Uncovering the Latent Potential of Deep Intermediate Representations" (ICML 26)</strong></p>
+
 # Uncovering the Latent Potential of Deep Intermediate Representations
 
 **LOES** is the reference implementation for **Layerwise Optimal Embedding Selection**, a lightweight module for identifying useful intermediate layers in deep models.
@@ -17,23 +18,6 @@ LOES works in three practical modes:
 2. **Label-free embeddings**: pass embeddings only; LOES ranks layers using isotropy and redundancy.
 3. **Hugging Face model-id mode**: pass a model id plus either a PyTorch dataloader or a Hugging Face-style dataset.
 
-## Repository Structure
-
-```text
-loes/
-  api.py                 # Core LOES implementation and public API
-  __init__.py            # Package exports
-tests/
-  test_loes.py           # Unit tests for supervised, label-free, and HF-style usage
-experiments/
-  conf/                  # Experiment configurations
-  Results_Final/         # Paper-facing result artifacts
-  main_*.py              # Text, image, audio, and segmentation experiment scripts
-example_loes.py          # End-to-end usage examples
-pyproject.toml           # Package metadata and dependencies
-LICENSE                  # MIT license
-```
-
 ## Installation
 
 ```bash
@@ -44,12 +28,6 @@ For Hugging Face model-id and dataset loading:
 
 ```bash
 pip install -e ".[huggingface]"
-```
-
-For development:
-
-```bash
-pip install -e ".[dev]"
 ```
 
 ## Quick Start
@@ -191,30 +169,6 @@ You can also force `pooling="cls"`, `pooling="mean"`, or `pooling="masked_mean"`
 - `task="regression"`: targets can be shaped as `(n_cal,)` or `(n_cal, out_dim)`.
 - `task="label_free"`: targets are optional and ignored; selection uses isotropy and redundancy only.
 
-## Experiments
-
-Experiment scripts and configuration files live under `experiments/`. Final result artifacts used for paper tables and plots are stored under:
-
-```text
-experiments/Results_Final/
-```
-
-Typical entry points include:
-
-```bash
-python experiments/main_text.py
-python experiments/main_image.py
-python experiments/main_audio.py
-python experiments/main_image_seg.py
-```
-
-## Development
-
-```bash
-python -m pytest -q
-python -m compileall -q loes tests
-```
-
 ## Citation
 
 ```bibtex
@@ -231,4 +185,3 @@ url={https://openreview.net/forum?id=6up1qGJwYZ}
 ## License
 
 This project is released under the MIT License. See [LICENSE](LICENSE).
->>>>>>> 36b7855 (Initial Code)
