@@ -1,0 +1,8 @@
+run,mode,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+loes_k_4_mteb_MTOPDomainClassification_en,loes,4,concat,False,0.9774281805745554,mteb/MTOPDomainClassification/en,"[11, 10, 6, 7]",en,bert-base-uncased
+loes_k_5_mteb_MTOPDomainClassification_en,loes,5,concat,False,0.9783401732786138,mteb/MTOPDomainClassification/en,"[6, 10, 7, 11, 9]",en,bert-base-uncased
+loes_k_6_mteb_MTOPDomainClassification_en,loes,6,concat,False,0.9774281805745554,mteb/MTOPDomainClassification/en,"[11, 10, 6, 9, 7, 8]",en,bert-base-uncased
+loes_k_7_mteb_MTOPDomainClassification_en,loes,7,concat,False,0.9817601459188326,mteb/MTOPDomainClassification/en,"[7, 10, 6, 9, 8, 11, 4]",en,bert-base-uncased
+loes_k_8_mteb_MTOPDomainClassification_en,loes,8,concat,False,0.9833561331509348,mteb/MTOPDomainClassification/en,"[11, 10, 9, 6, 7, 8, 4, 5]",en,bert-base-uncased
+loes_k_9_mteb_MTOPDomainClassification_en,loes,9,concat,False,0.9838121295029639,mteb/MTOPDomainClassification/en,"[11, 10, 6, 9, 7, 8, 4, 5, 3]",en,bert-base-uncased
+loes_k_10_mteb_MTOPDomainClassification_en,loes,10,concat,False,0.9842681258549931,mteb/MTOPDomainClassification/en,"[7, 10, 9, 6, 11, 8, 5, 4, 3, 1]",en,bert-base-uncased

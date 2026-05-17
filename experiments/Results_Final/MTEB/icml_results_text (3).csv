@@ -1,0 +1,13 @@
+run,mode,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+last_mteb_MTOPDomainClassification_en,last,1,concat,False,0.8137254901960784,mteb/MTOPDomainClassification/en,[21],en,answerdotai/ModernBERT-base
+last_3_concat_mteb_MTOPDomainClassification_en,last_k,3,concat,False,0.8244414044687642,mteb/MTOPDomainClassification/en,"[19, 20, 21]",en,answerdotai/ModernBERT-base
+loes_k_1_mteb_MTOPDomainClassification_en,loes,1,concat,False,0.9249886000911993,mteb/MTOPDomainClassification/en,[3],en,answerdotai/ModernBERT-base
+loes_k_2_mteb_MTOPDomainClassification_en,loes,2,concat,False,0.9550843593251254,mteb/MTOPDomainClassification/en,"[1, 21]",en,answerdotai/ModernBERT-base
+loes_k_3_mteb_MTOPDomainClassification_en,loes,3,concat,False,0.9598723210214318,mteb/MTOPDomainClassification/en,"[3, 21, 1]",en,answerdotai/ModernBERT-base
+loes_k_4_mteb_MTOPDomainClassification_en,loes,4,concat,False,0.957592339261286,mteb/MTOPDomainClassification/en,"[3, 21, 1, 4]",en,answerdotai/ModernBERT-base
+loes_k_5_mteb_MTOPDomainClassification_en,loes,5,concat,False,0.9601003191974464,mteb/MTOPDomainClassification/en,"[1, 21, 3, 4, 10]",en,answerdotai/ModernBERT-base
+loes_k_6_mteb_MTOPDomainClassification_en,loes,6,concat,False,0.959188326493388,mteb/MTOPDomainClassification/en,"[1, 20, 3, 4, 10, 21]",en,answerdotai/ModernBERT-base
+loes_k_7_mteb_MTOPDomainClassification_en,loes,7,concat,False,0.9578203374373006,mteb/MTOPDomainClassification/en,"[1, 21, 3, 4, 10, 17, 19]",en,answerdotai/ModernBERT-base
+loes_k_8_mteb_MTOPDomainClassification_en,loes,8,concat,False,0.9566803465572276,mteb/MTOPDomainClassification/en,"[3, 21, 1, 4, 10, 19, 20, 18]",en,answerdotai/ModernBERT-base
+loes_k_9_mteb_MTOPDomainClassification_en,loes,9,concat,False,0.9512083903328773,mteb/MTOPDomainClassification/en,"[1, 21, 3, 4, 15, 20, 18, 19, 16]",en,answerdotai/ModernBERT-base
+loes_k_10_mteb_MTOPDomainClassification_en,loes,10,concat,False,0.9541723666210671,mteb/MTOPDomainClassification/en,"[3, 21, 1, 4, 11, 20, 19, 18, 17, 15]",en,answerdotai/ModernBERT-base

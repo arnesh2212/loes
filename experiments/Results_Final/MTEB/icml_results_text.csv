@@ -1,0 +1,6 @@
+run,mode,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+last_mteb_emotion_default,last,1,concat,False,0.6112789526686808,mteb/emotion/default,[11],default,bert-base-uncased
+last_3_concat_mteb_emotion_default,last_k,3,concat,False,0.6143001007049346,mteb/emotion/default,"[9, 10, 11]",default,bert-base-uncased
+loes_k_1_mteb_emotion_default,loes,1,concat,False,0.5921450151057401,mteb/emotion/default,[10],default,bert-base-uncased
+loes_k_2_mteb_emotion_default,loes,2,concat,False,0.6037260825780463,mteb/emotion/default,"[10, 9]",default,bert-base-uncased
+loes_k_3_mteb_emotion_default,loes,3,concat,False,0.6153071500503524,mteb/emotion/default,"[10, 9, 8]",default,bert-base-uncased

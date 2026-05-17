@@ -1,0 +1,3 @@
+run,selection_mode,alpha,gamma,eta,k,n_cal,fusion,geo,geo_weight,test_acc,val_acc,dataset,selected_layers,model,seed,time
+residual_only_a1.0_g0.5_e0.1_k4_ncal64_fusionconcat_geo0_s42_ModernBERT-base_mteb_MTOPDomainClassification_en,residual_only,1.0,0.5,0.1,4,64,concat,False,0.1,0.9060647514819882,0.9060647514819882,mteb/MTOPDomainClassification/en,"[14, 21, 20, 19]",answerdotai/ModernBERT-base,42,1769278201.7330568
+residual_only_a1.0_g0.5_e0.1_k4_ncal512_fusionconcat_geo0_s42_ModernBERT-base_mteb_MTOPDomainClassification_en,residual_only,1.0,0.5,0.1,4,512,concat,False,0.1,0.9092567259461924,0.9092567259461924,mteb/MTOPDomainClassification/en,"[10, 21, 20, 18]",answerdotai/ModernBERT-base,42,1769278617.0098052

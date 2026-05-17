@@ -1,0 +1,17 @@
+run,mode,metric,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+last_4_concat_mteb_emotion_default,last_k,N/A,4,concat,False,0.5030211480362538,mteb/emotion/default,"[18, 19, 20, 21]",default,answerdotai/ModernBERT-base
+last_4_concat_mteb_amazon_massive_intent_en,last_k,N/A,4,concat,False,0.11936785474108944,mteb/amazon_massive_intent/en,"[18, 19, 20, 21]",en,answerdotai/ModernBERT-base
+last_4_concat_mteb_amazon_massive_scenario_en,last_k,N/A,4,concat,False,0.6334902488231339,mteb/amazon_massive_scenario/en,"[18, 19, 20, 21]",en,answerdotai/ModernBERT-base
+last_4_concat_mteb_amazon_counterfactual_en,last_k,N/A,4,concat,False,0.8388059701492537,mteb/amazon_counterfactual/en,"[18, 19, 20, 21]",en,answerdotai/ModernBERT-base
+last_4_concat_mteb_toxic_conversations_50k_default,last_k,N/A,4,concat,False,0.92356,mteb/toxic_conversations_50k/default,"[18, 19, 20, 21]",default,answerdotai/ModernBERT-base
+last_4_concat_mteb_MTOPDomainClassification_en,last_k,N/A,4,concat,False,0.7922936616507068,mteb/MTOPDomainClassification/en,"[18, 19, 20, 21]",en,answerdotai/ModernBERT-base
+last_4_concat_mteb_banking77_default,last_k,N/A,4,concat,False,0.4466840052015605,mteb/banking77/default,"[18, 19, 20, 21]",default,answerdotai/ModernBERT-base
+last_4_concat_mteb_tweet_sentiment_extraction_default,last_k,N/A,4,concat,False,0.6051864801864801,mteb/tweet_sentiment_extraction/default,"[18, 19, 20, 21]",default,answerdotai/ModernBERT-base
+last_4_concat_mteb_emotion_default,last_k,N/A,4,concat,False,0.6289023162134945,mteb/emotion/default,"[20, 21, 22, 23]",default,google-bert/bert-large-uncased
+last_4_concat_mteb_amazon_massive_intent_en,last_k,N/A,4,concat,False,0.16577000672494957,mteb/amazon_massive_intent/en,"[20, 21, 22, 23]",en,google-bert/bert-large-uncased
+last_4_concat_mteb_amazon_massive_scenario_en,last_k,N/A,4,concat,False,0.8500336247478144,mteb/amazon_massive_scenario/en,"[20, 21, 22, 23]",en,google-bert/bert-large-uncased
+last_4_concat_mteb_amazon_counterfactual_en,last_k,N/A,4,concat,False,0.9104477611940298,mteb/amazon_counterfactual/en,"[20, 21, 22, 23]",en,google-bert/bert-large-uncased
+last_4_concat_mteb_MTOPDomainClassification_en,last_k,N/A,4,concat,False,0.9655722754217966,mteb/MTOPDomainClassification/en,"[20, 21, 22, 23]",en,google-bert/bert-large-uncased
+last_4_concat_mteb_banking77_default,last_k,N/A,4,concat,False,0.7565019505851756,mteb/banking77/default,"[20, 21, 22, 23]",default,google-bert/bert-large-uncased
+last_4_concat_mteb_tweet_sentiment_extraction_default,last_k,N/A,4,concat,False,0.6809440559440559,mteb/tweet_sentiment_extraction/default,"[20, 21, 22, 23]",default,google-bert/bert-large-uncased
+last_4_concat_mteb_toxic_conversations_50k_default,last_k,N/A,4,concat,False,0.92546,mteb/toxic_conversations_50k/default,"[20, 21, 22, 23]",default,google-bert/bert-large-uncased

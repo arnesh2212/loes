@@ -1,0 +1,6 @@
+run,mode,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+last_mteb_MTOPDomainClassification_en,last,1,concat,False,0.9667122663018696,mteb/MTOPDomainClassification/en,[11],en,bert-base-uncased
+last_3_concat_mteb_MTOPDomainClassification_en,last_k,3,concat,False,0.9740082079343365,mteb/MTOPDomainClassification/en,"[9, 10, 11]",en,bert-base-uncased
+loes_k_1_mteb_MTOPDomainClassification_en,loes,1,concat,False,0.9607843137254902,mteb/MTOPDomainClassification/en,[7],en,bert-base-uncased
+loes_k_2_mteb_MTOPDomainClassification_en,loes,2,concat,False,0.971500227998176,mteb/MTOPDomainClassification/en,"[11, 10]",en,bert-base-uncased
+loes_k_3_mteb_MTOPDomainClassification_en,loes,3,concat,False,0.9797081623347014,mteb/MTOPDomainClassification/en,"[11, 10, 6]",en,bert-base-uncased

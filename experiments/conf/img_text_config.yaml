@@ -1,0 +1,64 @@
+seed: 42
+device: "cuda"
+
+exps: 
+  #- "last"
+  #- "last_3_concat"
+  #- "loes_k_2"
+  - "loes_k_3" 
+  - "loes_k_4"
+  # - "random_k_2"
+  # - "random_k_3"
+  # - "random_k_4"
+  # - "learnable_weight"
+  # - "loes_k_3_no_geo"
+
+model:
+  names:
+    - "openai/clip-vit-base-patch32"
+  path: null 
+  max_len: 77
+  proj_dim: 512
+  img_size: 224
+
+dataset:
+  name: "asaniczka/amazon-products-dataset-2023-1-4m-products" #kaggle dataset
+  path: "/home/aniket/Desktop/Datasets/amazon_products_120k_evenly_selected"
+
+  train_split: "train"
+  val_split: "validation"
+  test_split: "test" 
+
+task: 'regression' # or classification
+
+training:
+  epochs: 15
+  bs: 32
+  test_bs: 32
+  warmup_ratio: 0.1 # Standard 10% warmup
+
+calibration:
+  n_cal: 10000 
+  cal_bs: 64
+
+selection:
+  mode: loes 
+
+topk: 3
+
+ablation:
+  fusion: "concat"
+  use_geo_loss: false
+  no_adapters: false
+
+optim:
+  finetune: false # Set to true to enable backbone updates
+  lr_backbone: 2e-5 # Very low for backbone stability
+  lr_probe: 1e-4    # Higher for fresh initialized heads
+  weight_decay: 0.01
+
+wandb:
+  project: "ICML_LOES_mod_imgtext_regress_amzprod23"
+
+logging:
+  results_csv: "icml_results_text.csv"

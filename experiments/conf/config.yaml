@@ -1,0 +1,82 @@
+seed: 0
+device: "cuda"
+
+model:
+  name: "facebook/dinov2-small"
+  pretrained: true
+  img_size: 224
+  proj_dim: 256
+
+  use_dual: false
+  dino_name: "facebook/dinov2-small"
+  mae_name: "facebook/vit-mae-base"
+
+
+dataset:
+  name: "tanganke/stanford_cars"  
+  train_split: "train"
+  val_split: null
+  test_split: "test"
+
+training:
+  epochs: 20
+  bs: 128
+  test_bs: 256
+
+calibration:
+  n_cal_pct: 0.2  # 20% of dataset
+  cal_bs: 128
+  n_cal: 2000
+
+selection:
+  mode: loes
+
+topk: 3
+
+ablation:
+  fusion: "concat"
+  use_geo_loss: true
+  no_adapters: false
+
+optim:
+  finetune: false
+  lr_backbone: 1e-5
+  lr_probe: 1e-4
+
+wandb:
+  project: "ICML_LOES_6_HF_Models_Final"
+
+logging:
+  results_csv: "icml_ablations.csv"
+
+
+# MULTI-MODEL ANALYSIS CONFIGURATION
+multi_model_analysis:
+  enabled: false
+  
+  models:
+    - name: "facebook/deit-base-distilled-patch16-224"
+      tag: "DeiT-B16"
+    - name: "facebook/dinov3-vits16-pretrain-lvd1689m"
+      tag: "DINOv3-S16"
+    - name: "facebook/dinov2-small"
+      tag: "DINOv2-S"
+    - name: "google/vit-base-patch16-224-in21k"
+      tag: "ViT-IN21k-B16"
+    - name: "openai/clip-vit-base-patch32"
+      tag: "CLIP-B32"
+    - name: "facebook/vit-mae-base"
+      tag: "MAE-B16"
+    # - name: "apple/aimv2-large-patch14-224"
+    #   tag: "AIMv2-L14"
+    
+  
+  output_dir: "multi_model_analysis"
+  
+  per_layer_scores_dir: "per_layer_scores"
+  per_layer_graphs_dir: "per_layer_graphs"
+  
+  model_rankings_csv: "model_rankings.csv"
+  model_accuracies_csv: "model_accuracies.csv"
+  
+  last_layer_baseline_csv: "last_layer_baseline.csv"

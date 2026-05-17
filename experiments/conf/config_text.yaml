@@ -1,0 +1,89 @@
+seed: 42
+device: "cuda"
+
+# Experiments comparing LOES with other metric-based layer selection methods
+# Format: {metric}_k_{num_layers} or special modes like "loes_k_4", "last", "random_k_4"
+exps: 
+  # Baselines
+  - "last"
+  # - "last_3_concat"
+  # - "last_3_mean"
+  
+  # # LOES (your method)
+  # - "loes_k_1"
+  # - "loes_k_2"
+  # - "loes_k_3"
+  - "loes_k_4"
+  
+
+  # # Matrix Entropy (from repitl) - higher entropy = more informative
+  # - "entropy_k_1"
+  # - "entropy_k_2"
+  # - "entropy_k_3"
+  - "entropy_k_4"
+  
+  # # Curvature - lower curvature may indicate smoother representations
+  # - "curvature_k_1"
+  # - "curvature_k_2"
+  # - "curvature_k_3"
+  - "curvature_k_4"
+  
+  # # Intrinsic Dimension (TwoNN) - captures representation complexity
+  # - "intrinsic_dim_k_1"
+  # - "intrinsic_dim_k_2"
+  # - "intrinsic_dim_k_3"
+  - "intrinsic_dim_k_4"
+
+
+model:
+  names:
+    - "EleutherAI/pythia-410m"
+    # - "bert-base-uncased"
+
+    # - "google-bert/bert-base-multilingual-cased"
+    # - "FacebookAI/roberta-base"
+    # - "distilbert/distilbert-base-uncased"
+
+  path: null 
+  max_len: 256
+  proj_dim: 256
+
+datasets:
+  - name: mteb/amazon_massive_intent
+    subsets: [en]
+    train_split: train
+    val_split: validation
+    test_split: test
+
+
+training:
+  epochs: 15
+  bs: 128
+  test_bs: 128
+  warmup_ratio: 0.1
+
+calibration:
+  n_cal: 2000
+  cal_bs: 128
+
+selection:
+  mode: loes 
+
+topk: 4
+
+ablation:
+  fusion: "concat"
+  use_geo_loss: false
+  no_adapters: false
+
+optim:
+  finetune: false
+  lr_backbone: 2e-5
+  lr_probe: 1e-4
+  weight_decay: 0.01
+
+wandb:
+  project: "ICML_LOES_MultiMetric_Comparison"
+
+logging:
+  results_csv: "icml_results_multimetric-pythia.csv"

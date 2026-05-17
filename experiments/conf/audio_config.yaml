@@ -1,0 +1,47 @@
+seed: 0
+device: "cuda"
+
+model:
+  name: "facebook/wav2vec2-base-960h"
+  pretrained: true
+  proj_dim: 256
+  # img_size is removed as it's not needed for audio
+
+dataset:
+  name: "alexnasa/english_accents"  # Matches the default in your bash script
+  train_split: "train"
+  # val_split: "validation"  # Most audio HF datasets have a validation split
+  # test_split: "test"
+  test_split: null        # <--- UNCOMMENT THIS (Required for Bash override)
+  val_split: null
+
+training:
+  epochs: 15
+  bs: 64      # CRITICAL: Wav2Vec2 requires smaller batch sizes (Try 32 or 16)
+  test_bs: 32
+
+calibration:
+  n_cal: 5000 # Reduced slightly to save VRAM during calibration
+  cal_bs: 32
+
+selection:
+  mode: loes  # Options: [loes, random, last, learnable_weight]
+
+topk: 3
+
+ablation:
+  fusion: "concat"       # Options: [concat, mean, sum]
+  use_geo_loss: true     # If false, removes GCR
+  no_adapters: false     # If true, removes adapter MLPs
+
+optim:
+  finetune: false
+  lr_backbone: 0     # Wav2Vec2 is sensitive; keep this low
+  lr_probe: 1e-4
+
+wandb:
+  project: "ICML_LOES_Ablations_Audio(2)"
+
+logging:
+  results_csv: "icml_ablations_audio.csv"
+  

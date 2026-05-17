@@ -1,0 +1,92 @@
+# conf/config_text.yaml — full ablation / hyperparam sweep
+seed: 42
+device: "cuda"
+
+# If grid.enabled = true the run enumerates the cartesian product below.
+grid:
+  enabled: true
+  # selection modes to sweep (supported by the script)
+  selection_modes:
+    - "loes"
+    - "residual_only"
+    # - "last"
+    # - "last_k"
+    # - "learnable_weight"
+  # K sweep (number of selected layers)
+  k_list: [ 4]
+  # calibration sizes to test (sample-efficiency)
+  n_cal_list: [64, 512]
+  # fusions to test; "learnable" will use aggregator when applicable
+  fusion_list: ["concat"]
+  # toggle geometric training loss on/off
+  geo_flags: [false]
+
+# seeds -> run each grid cell with these seeds
+seeds: [42]
+
+# Optional short exps list (not used when grid.enabled = true)
+exps: []
+
+model:
+  names:
+    - "answerdotai/ModernBERT-base"
+  path: null
+  max_len: 256
+  proj_dim: 256
+
+dataset:
+  name: "mteb/MTOPDomainClassification"
+  path: null
+  subsets:
+    - "en"
+  train_split: "train"
+  val_split: "validation"
+  test_split: "test"
+
+training:
+  epochs: 15
+  bs: 128
+  test_bs: 128
+  warmup_ratio: 0.1
+
+calibration:
+  # default (will be overridden per-grid by grid.n_cal_list)
+  n_cal: 2000
+  cal_bs: 128
+
+# default selection params (will be swept by grid)
+selection:
+  mode: loes
+  # regularizer for closed-form ridge in selection
+  reg: 1e-3
+  # default values (swept via selection_alpha_list/gamma_list/eta_list in grid)
+  alpha: 1.0
+  gamma: 0.5
+  eta: 0.1
+  # hyperparam lists for sweep (script will use selection.alpha_list etc if present)
+  alpha_list: [ 1.0]
+  gamma_list: [0.5]
+  eta_list: [0.1]
+
+# topk default (overridden by grid.k_list)
+topk: 3
+
+ablation:
+  fusion: "concat"
+  use_geo_loss: false
+  no_adapters: false
+  # weight for the geometric loss when enabled (swept indirectly by geo_flags)
+  geo_weight: 0.1
+
+optim:
+  finetune: false
+  lr_backbone: 2e-5
+  lr_probe: 1e-4
+  lr_aggregator: 1e-3
+  weight_decay: 0.01
+
+wandb:
+  project: "ICML_LOES_Ablations_Text-final-abs-multi"
+
+logging:
+  results_csv: "icml_results_text_fullsweep.csv"

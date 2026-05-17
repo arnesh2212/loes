@@ -1,0 +1,78 @@
+run,mode,metric,k,fusion,geo,test_acc,dataset,selected_layers,subset,model
+last_mteb_emotion_default,last,N/A,1,concat,False,0.4838872104733132,mteb/emotion/default,[21],default,answerdotai/ModernBERT-base
+loes_k_4_mteb_emotion_default,loes,N/A,4,concat,False,0.5684793554884189,mteb/emotion/default,"[1, 15, 14, 5]",default,answerdotai/ModernBERT-base
+entropy_k_4_mteb_emotion_default,metric,entropy,4,concat,False,0.5377643504531722,mteb/emotion/default,"[6, 9, 10, 5]",default,answerdotai/ModernBERT-base
+curvature_k_4_mteb_emotion_default,metric,curvature,4,concat,False,0.5060422960725075,mteb/emotion/default,"[16, 15, 20, 18]",default,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_emotion_default,metric,intrinsic_dim,4,concat,False,0.5412890231621349,mteb/emotion/default,"[3, 6, 5, 7]",default,answerdotai/ModernBERT-base
+last_mteb_amazon_massive_intent_en,last,N/A,1,concat,False,0.11197041022192333,mteb/amazon_massive_intent/en,[21],en,answerdotai/ModernBERT-base
+loes_k_4_mteb_amazon_massive_intent_en,loes,N/A,4,concat,False,0.1496301277740417,mteb/amazon_massive_intent/en,"[3, 15, 1, 2]",en,answerdotai/ModernBERT-base
+entropy_k_4_mteb_amazon_massive_intent_en,metric,entropy,4,concat,False,0.1378614660390047,mteb/amazon_massive_intent/en,"[6, 10, 9, 4]",en,answerdotai/ModernBERT-base
+curvature_k_4_mteb_amazon_massive_intent_en,metric,curvature,4,concat,False,0.11129791526563551,mteb/amazon_massive_intent/en,"[15, 16, 17, 18]",en,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_amazon_massive_intent_en,metric,intrinsic_dim,4,concat,False,0.13920645595158038,mteb/amazon_massive_intent/en,"[10, 6, 11, 7]",en,answerdotai/ModernBERT-base
+last_mteb_amazon_massive_scenario_en,last,N/A,1,concat,False,0.6284465366509752,mteb/amazon_massive_scenario/en,[21],en,answerdotai/ModernBERT-base
+loes_k_4_mteb_amazon_massive_scenario_en,loes,N/A,4,concat,False,0.785137861466039,mteb/amazon_massive_scenario/en,"[3, 15, 1, 4]",en,answerdotai/ModernBERT-base
+entropy_k_4_mteb_amazon_massive_scenario_en,metric,entropy,4,concat,False,0.7454606590450572,mteb/amazon_massive_scenario/en,"[6, 10, 9, 4]",en,answerdotai/ModernBERT-base
+curvature_k_4_mteb_amazon_massive_scenario_en,metric,curvature,4,concat,False,0.6143241425689308,mteb/amazon_massive_scenario/en,"[15, 16, 17, 18]",en,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_amazon_massive_scenario_en,metric,intrinsic_dim,4,concat,False,0.7370544720914594,mteb/amazon_massive_scenario/en,"[12, 11, 9, 6]",en,answerdotai/ModernBERT-base
+last_mteb_amazon_counterfactual_en,last,N/A,1,concat,False,0.835820895522388,mteb/amazon_counterfactual/en,[21],en,answerdotai/ModernBERT-base
+loes_k_4_mteb_amazon_counterfactual_en,loes,N/A,4,concat,False,0.8507462686567164,mteb/amazon_counterfactual/en,"[3, 6, 4, 15]",en,answerdotai/ModernBERT-base
+entropy_k_4_mteb_amazon_counterfactual_en,metric,entropy,4,concat,False,0.8388059701492537,mteb/amazon_counterfactual/en,"[16, 19, 15, 18]",en,answerdotai/ModernBERT-base
+curvature_k_4_mteb_amazon_counterfactual_en,metric,curvature,4,concat,False,0.8388059701492537,mteb/amazon_counterfactual/en,"[12, 11, 13, 21]",en,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_amazon_counterfactual_en,metric,intrinsic_dim,4,concat,False,0.8298507462686567,mteb/amazon_counterfactual/en,"[6, 3, 7, 11]",en,answerdotai/ModernBERT-base
+last_mteb_toxic_conversations_50k_default,last,N/A,1,concat,False,0.9233,mteb/toxic_conversations_50k/default,[21],default,answerdotai/ModernBERT-base
+loes_k_4_mteb_toxic_conversations_50k_default,loes,N/A,4,concat,False,0.9266,mteb/toxic_conversations_50k/default,"[1, 15, 7, 4]",default,answerdotai/ModernBERT-base
+entropy_k_4_mteb_toxic_conversations_50k_default,metric,entropy,4,concat,False,0.92436,mteb/toxic_conversations_50k/default,"[5, 6, 4, 9]",default,answerdotai/ModernBERT-base
+curvature_k_4_mteb_toxic_conversations_50k_default,metric,curvature,4,concat,False,0.9245,mteb/toxic_conversations_50k/default,"[15, 12, 20, 13]",default,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_toxic_conversations_50k_default,metric,intrinsic_dim,4,concat,False,0.92666,mteb/toxic_conversations_50k/default,"[3, 5, 1, 10]",default,answerdotai/ModernBERT-base
+last_mteb_MTOPDomainClassification_en,last,N/A,1,concat,False,0.7806657546739626,mteb/MTOPDomainClassification/en,[21],en,answerdotai/ModernBERT-base
+loes_k_4_mteb_MTOPDomainClassification_en,loes,N/A,4,concat,False,0.9448244414044688,mteb/MTOPDomainClassification/en,"[3, 15, 1, 4]",en,answerdotai/ModernBERT-base
+entropy_k_4_mteb_MTOPDomainClassification_en,metric,entropy,4,concat,False,0.9190606475148199,mteb/MTOPDomainClassification/en,"[14, 6, 9, 7]",en,answerdotai/ModernBERT-base
+curvature_k_4_mteb_MTOPDomainClassification_en,metric,curvature,4,concat,False,0.7667578659370725,mteb/MTOPDomainClassification/en,"[15, 16, 17, 18]",en,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_MTOPDomainClassification_en,metric,intrinsic_dim,4,concat,False,0.9035567715458276,mteb/MTOPDomainClassification/en,"[7, 8, 6, 9]",en,answerdotai/ModernBERT-base
+last_mteb_banking77_default,last,N/A,1,concat,False,0.3546814044213264,mteb/banking77/default,[21],default,answerdotai/ModernBERT-base
+loes_k_4_mteb_banking77_default,loes,N/A,4,concat,False,0.5845253576072822,mteb/banking77/default,"[1, 15, 4, 5]",default,answerdotai/ModernBERT-base
+entropy_k_4_mteb_banking77_default,metric,entropy,4,concat,False,0.5133289986996099,mteb/banking77/default,"[6, 9, 10, 4]",default,answerdotai/ModernBERT-base
+curvature_k_4_mteb_banking77_default,metric,curvature,4,concat,False,0.44245773732119636,mteb/banking77/default,"[15, 20, 17, 21]",default,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_banking77_default,metric,intrinsic_dim,4,concat,False,0.47919375812743825,mteb/banking77/default,"[7, 6, 8, 9]",default,answerdotai/ModernBERT-base
+last_mteb_tweet_sentiment_extraction_default,last,N/A,1,concat,False,0.6022727272727273,mteb/tweet_sentiment_extraction/default,[21],default,answerdotai/ModernBERT-base
+loes_k_4_mteb_tweet_sentiment_extraction_default,loes,N/A,4,concat,False,0.6593822843822844,mteb/tweet_sentiment_extraction/default,"[1, 15, 4, 6]",default,answerdotai/ModernBERT-base
+entropy_k_4_mteb_tweet_sentiment_extraction_default,metric,entropy,4,concat,False,0.6226689976689976,mteb/tweet_sentiment_extraction/default,"[9, 10, 6, 7]",default,answerdotai/ModernBERT-base
+curvature_k_4_mteb_tweet_sentiment_extraction_default,metric,curvature,4,concat,False,0.6182983682983683,mteb/tweet_sentiment_extraction/default,"[15, 20, 21, 16]",default,answerdotai/ModernBERT-base
+intrinsic_dim_k_4_mteb_tweet_sentiment_extraction_default,metric,intrinsic_dim,4,concat,False,0.6503496503496503,mteb/tweet_sentiment_extraction/default,"[3, 6, 4, 1]",default,answerdotai/ModernBERT-base
+last_mteb_emotion_default,last,N/A,1,concat,False,0.5936555891238671,mteb/emotion/default,[23],default,google-bert/bert-large-uncased
+loes_k_4_mteb_emotion_default,loes,N/A,4,concat,False,0.6699798590130916,mteb/emotion/default,"[21, 19, 20, 18]",default,google-bert/bert-large-uncased
+entropy_k_4_mteb_emotion_default,metric,entropy,4,concat,False,0.6334340382678751,mteb/emotion/default,"[19, 20, 21, 23]",default,google-bert/bert-large-uncased
+curvature_k_4_mteb_emotion_default,metric,curvature,4,concat,False,0.6606243705941591,mteb/emotion/default,"[0, 4, 1, 2]",default,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_emotion_default,metric,intrinsic_dim,4,concat,False,0.6638569989929506,mteb/emotion/default,"[6, 3, 5, 4]",default,google-bert/bert-large-uncased
+last_mteb_amazon_massive_intent_en,last,N/A,1,concat,False,0.15366509751176866,mteb/amazon_massive_intent/en,[23],en,google-bert/bert-large-uncased
+loes_k_4_mteb_amazon_massive_intent_en,loes,N/A,4,concat,False,0.17451244115669132,mteb/amazon_massive_intent/en,"[9, 20, 19, 21]",en,google-bert/bert-large-uncased
+entropy_k_4_mteb_amazon_massive_intent_en,metric,entropy,4,concat,False,0.17283120376597175,mteb/amazon_massive_intent/en,"[19, 20, 21, 18]",en,google-bert/bert-large-uncased
+curvature_k_4_mteb_amazon_massive_intent_en,metric,curvature,4,concat,False,0.17114996637525218,mteb/amazon_massive_intent/en,"[0, 1, 2, 15]",en,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_amazon_massive_intent_en,metric,intrinsic_dim,4,concat,False,0.15601882985877605,mteb/amazon_massive_intent/en,"[23, 22, 5, 12]",en,google-bert/bert-large-uncased
+last_mteb_amazon_massive_scenario_en,last,N/A,1,concat,False,0.8214525891055817,mteb/amazon_massive_scenario/en,[23],en,google-bert/bert-large-uncased
+loes_k_4_mteb_amazon_massive_scenario_en,loes,N/A,4,concat,False,0.8745796906523201,mteb/amazon_massive_scenario/en,"[9, 20, 19, 21]",en,google-bert/bert-large-uncased
+entropy_k_4_mteb_amazon_massive_scenario_en,metric,entropy,4,concat,False,0.8510423671822461,mteb/amazon_massive_scenario/en,"[19, 20, 21, 18]",en,google-bert/bert-large-uncased
+curvature_k_4_mteb_amazon_massive_scenario_en,metric,curvature,4,concat,False,0.8799596503026227,mteb/amazon_massive_scenario/en,"[2, 0, 4, 7]",en,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_amazon_massive_scenario_en,metric,intrinsic_dim,4,concat,False,0.8527236045729657,mteb/amazon_massive_scenario/en,"[23, 22, 21, 20]",en,google-bert/bert-large-uncased
+last_mteb_amazon_counterfactual_en,last,N/A,1,concat,False,0.9074626865671642,mteb/amazon_counterfactual/en,[23],en,google-bert/bert-large-uncased
+loes_k_4_mteb_amazon_counterfactual_en,loes,N/A,4,concat,False,0.9194029850746268,mteb/amazon_counterfactual/en,"[21, 20, 19, 22]",en,google-bert/bert-large-uncased
+entropy_k_4_mteb_amazon_counterfactual_en,metric,entropy,4,concat,False,0.9134328358208955,mteb/amazon_counterfactual/en,"[19, 20, 21, 18]",en,google-bert/bert-large-uncased
+curvature_k_4_mteb_amazon_counterfactual_en,metric,curvature,4,concat,False,0.8477611940298507,mteb/amazon_counterfactual/en,"[4, 10, 12, 2]",en,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_amazon_counterfactual_en,metric,intrinsic_dim,4,concat,False,0.8746268656716418,mteb/amazon_counterfactual/en,"[3, 11, 2, 4]",en,google-bert/bert-large-uncased
+last_mteb_toxic_conversations_50k_default,last,N/A,1,concat,False,0.9272,mteb/toxic_conversations_50k/default,[23],default,google-bert/bert-large-uncased
+last_mteb_MTOPDomainClassification_en,last,N/A,1,concat,False,0.9532603739170087,mteb/MTOPDomainClassification/en,[23],en,google-bert/bert-large-uncased
+loes_k_4_mteb_MTOPDomainClassification_en,loes,N/A,4,concat,False,0.9781121751025992,mteb/MTOPDomainClassification/en,"[9, 19, 20, 21]",en,google-bert/bert-large-uncased
+entropy_k_4_mteb_MTOPDomainClassification_en,metric,entropy,4,concat,False,0.967624259005928,mteb/MTOPDomainClassification/en,"[19, 20, 21, 18]",en,google-bert/bert-large-uncased
+curvature_k_4_mteb_MTOPDomainClassification_en,metric,curvature,4,concat,False,0.9760601915184679,mteb/MTOPDomainClassification/en,"[8, 9, 12, 10]",en,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_MTOPDomainClassification_en,metric,intrinsic_dim,4,concat,False,0.9829001367989056,mteb/MTOPDomainClassification/en,"[10, 23, 9, 6]",en,google-bert/bert-large-uncased
+last_mteb_banking77_default,last,N/A,1,concat,False,0.6254876462938882,mteb/banking77/default,[23],default,google-bert/bert-large-uncased
+loes_k_4_mteb_banking77_default,loes,N/A,4,concat,False,0.8250975292587777,mteb/banking77/default,"[7, 20, 19, 21]",default,google-bert/bert-large-uncased
+entropy_k_4_mteb_banking77_default,metric,entropy,4,concat,False,0.7574772431729518,mteb/banking77/default,"[19, 20, 21, 18]",default,google-bert/bert-large-uncased
+curvature_k_4_mteb_banking77_default,metric,curvature,4,concat,False,0.864109232769831,mteb/banking77/default,"[0, 2, 3, 9]",default,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_banking77_default,metric,intrinsic_dim,4,concat,False,0.8211963589076723,mteb/banking77/default,"[23, 22, 21, 5]",default,google-bert/bert-large-uncased
+last_mteb_tweet_sentiment_extraction_default,last,N/A,1,concat,False,0.6736596736596736,mteb/tweet_sentiment_extraction/default,[23],default,google-bert/bert-large-uncased
+loes_k_4_mteb_tweet_sentiment_extraction_default,loes,N/A,4,concat,False,0.6914335664335665,mteb/tweet_sentiment_extraction/default,"[21, 20, 19, 22]",default,google-bert/bert-large-uncased
+entropy_k_4_mteb_tweet_sentiment_extraction_default,metric,entropy,4,concat,False,0.6975524475524476,mteb/tweet_sentiment_extraction/default,"[19, 20, 21, 18]",default,google-bert/bert-large-uncased
+curvature_k_4_mteb_tweet_sentiment_extraction_default,metric,curvature,4,concat,False,0.688348717948718,mteb/tweet_sentiment_extraction/default,"[4, 0, 17, 7]",default,google-bert/bert-large-uncased
+intrinsic_dim_k_4_mteb_tweet_sentiment_extraction_default,metric,intrinsic_dim,4,concat,False,0.6803613053613053,mteb/tweet_sentiment_extraction/default,"[4, 3, 5, 8]",default,google-bert/bert-large-uncased
+last_mteb_toxic_conversations_50k_default,last,N/A,1,concat,False,0.9267,mteb/toxic_conversations_50k/default,[23],default,google-bert/bert-large-uncased

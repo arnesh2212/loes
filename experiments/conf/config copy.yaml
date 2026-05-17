@@ -1,0 +1,52 @@
+seed: 0
+device: "cuda"
+
+model:
+  name: "vit_small_patch8_224"
+  pretrained: true
+  img_size: 224
+  proj_dim: 256         # projection dimension for each layer adapter (<= embed_dim)
+  adapt_use_gating: true
+
+dataset:
+  name: "tanganke/stanford_cars"  
+  train_split: "train"
+  test_split: "test"
+
+training:
+  epochs: 20
+  bs: 256
+  test_bs: 256
+  num_workers: 8
+
+calibration:
+  n_cal: 5000
+  cal_bs: 256
+
+loes:
+  reg: 1e-3
+  alpha: 1.0
+  gamma: 0.5
+  eta: 0.1
+
+topk: 3
+
+
+optim:
+  finetune: true      # if true, update backbone; otherwise backbone frozen
+  lr_backbone: 1e-5
+  wd_backbone: 5e-2
+  lr_probe: 1e-4
+  wd_probe: 1e-7
+  lr_min: 1e-6
+
+
+wandb:
+  project: "VIT_abilation_Trainable"
+
+logging:
+  results_csv: "loes_results.csv"
+
+
+selection:
+  mode: loes     # options: [loes, last]

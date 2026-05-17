@@ -1,0 +1,52 @@
+seed: 0
+device: "cuda"
+
+model:
+  img_size: 224
+  proj_dim: 256
+
+dataset:
+  name: "Chris1/cityscapes_segmentation"
+  train_split: "train"
+  val_split: "validation"
+  num_classes: 19
+
+training:
+  epochs: 20
+  bs: 32
+  test_bs: 64
+
+calibration:
+  n_cal: 2000
+  cal_bs: 64
+
+optim:
+  lr_probe: 1e-4
+
+wandb:
+  project: "ICML_LOES_Segmentation_11pm"
+
+# MULTI-MODEL ANALYSIS CONFIGURATION
+multi_model_analysis:
+  enabled: true
+  run_phase1: false
+  
+  models:
+    - name: "facebook/dinov2-small"
+      tag: "DINOv2-S"
+    - name: "facebook/dinov3-vits16-pretrain-lvd1689m"
+      tag: "DINOv3-S16"
+    - name: "CIDAS/clipseg-rd64-refined"
+      tag: "CLIPSeg"
+    - name: "microsoft/beit-base-patch16-224-pt22k-ft22k"
+      tag: "BEiT-B16"
+  
+  output_dir: "seg_multi_model_analysis"
+  
+  per_layer_scores_dir: "per_layer_scores"
+  per_layer_graphs_dir: "per_layer_graphs"
+  
+  model_rankings_csv: "model_rankings.csv"
+  model_accuracies_csv: "model_accuracies.csv"
+  last_layer_baseline_csv: "last_layer_baseline.csv"
+  learnable_weight_csv: "learnable_weight.csv"
