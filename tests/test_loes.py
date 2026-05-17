@@ -227,6 +227,27 @@ def test_hf_id_path_accepts_pytorch_dataloader():
     assert result.num_calibration_samples == 12
 
 
+def test_hf_id_path_accepts_pytorch_dataloader_as_dataset_argument():
+    torch.manual_seed(8)
+    inputs = torch.randint(0, 5, (16, 5)).float()
+    targets = (inputs[:, 0] > 2).long()
+    loader = DataLoader(TensorDataset(inputs, targets), batch_size=4)
+
+    result = select_layers_from_hf_id(
+        "dummy-bert",
+        dataset=loader,
+        task="classification",
+        k=2,
+        model_loader=lambda model_id: DummyHFModel(model_type="bert"),
+        max_calibration_samples=12,
+        show_progress=False,
+    )
+
+    assert len(result.selected_layers) == 2
+    assert result.model_name == "dummy-bert"
+    assert result.num_calibration_samples == 12
+
+
 def test_hf_id_path_accepts_hf_style_rows():
     torch.manual_seed(7)
     inputs = torch.randint(0, 5, (16, 5)).float()
@@ -236,6 +257,30 @@ def test_hf_id_path_accepts_hf_style_rows():
     result = select_layers_from_hf_id(
         "dummy-bert",
         dataset=rows,
+        task="classification",
+        k=2,
+        model_loader=lambda model_id: DummyHFModel(model_type="bert"),
+        batch_size=4,
+        max_calibration_samples=12,
+        show_progress=False,
+    )
+
+    assert len(result.selected_layers) == 2
+    assert result.model_name == "dummy-bert"
+    assert result.num_calibration_samples == 12
+
+
+def test_hf_id_path_accepts_hf_style_dataset_dict():
+    torch.manual_seed(9)
+    inputs = torch.randint(0, 5, (16, 5)).float()
+    targets = (inputs[:, 0] > 2).long()
+    rows = [{"input_ids": inputs[index], "labels": targets[index]} for index in range(inputs.shape[0])]
+    dataset_dict = {"train": rows, "validation": rows[:4]}
+
+    result = select_layers_from_hf_id(
+        "dummy-bert",
+        dataset=dataset_dict,
+        split="train",
         task="classification",
         k=2,
         model_loader=lambda model_id: DummyHFModel(model_type="bert"),

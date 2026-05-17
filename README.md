@@ -1,22 +1,51 @@
+<div align="center">
+
 <p><strong>Code for paper - "Uncovering the Latent Potential of Deep Intermediate Representations" (ICML 26)</strong></p>
 
-# Uncovering the Latent Potential of Deep Intermediate Representations
+<h1>Uncovering the Latent Potential of Deep Intermediate Representations</h1>
+
+<p>
+  <strong>Arnesh Batra</strong><sup>1</sup> ·
+  <strong>Arush Gumber</strong><sup>*1</sup> ·
+  <strong>Aniket Khandelwal</strong><sup>*1</sup> ·
+  <strong>Jashn Khemani</strong><sup>1</sup> ·
+  <strong>Anubha Gupta</strong><sup>1</sup>
+</p>
+
+<p>
+  <sup>1</sup>SBILab, Indraprastha Institute of Information Technology Delhi, Delhi, India<br>
+  <sup>*</sup>Equal contribution
+</p>
+
+<p>
+  <a href="#"><img alt="arXiv coming soon" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?logo=arxiv&logoColor=white"></a>
+  <a href="https://openreview.net/forum?id=6up1qGJwYZ"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-6up1qGJwYZ-8c1d40"></a>
+  <a href="https://example.com/loes"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-2f80ed"></a>
+  <a href="."><img alt="Code" src="https://img.shields.io/badge/Code-GitHub-181717?logo=github"></a>
+  <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green"></a>
+</p>
+
+<p>
+  <img alt="ICML 2026 Spotlight" src="https://img.shields.io/badge/ICML%202026-Spotlight-6f42c1">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-3776ab?logo=python&logoColor=white">
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.1%2B-ee4c2c?logo=pytorch&logoColor=white">
+  <img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-compatible-ffcc4d">
+</p>
+
+</div>
+
+---
 
 **LOES** is the reference implementation for **Layerwise Optimal Embedding Selection**, a lightweight module for identifying useful intermediate layers in deep models.
 
-**Accepted at ICML 2026 as a Spotlight.**
+LOES supports supervised layer selection with labels and label-free selection when labels are unavailable.
 
-[arXiv placeholder](https://arxiv.org/abs/XXXX.XXXXX) | [OpenReview](https://openreview.net/forum?id=6up1qGJwYZ) | [Project page placeholder](https://example.com/loes) | [Code](.)
+## Highlights
 
-## Overview
-
-Deep networks expose a stack of intermediate representations, but downstream pipelines often default to the final layer. LOES selects a compact set of layers using a calibration set. It supports supervised selection with labels and label-free selection when labels are unavailable.
-
-LOES works in three practical modes:
-
-1. **Supervised embeddings**: pass `(n_cal, L, D)` embeddings and labels; LOES returns the best layers for classification or regression.
-2. **Label-free embeddings**: pass embeddings only; LOES ranks layers using isotropy and redundancy.
-3. **Hugging Face model-id mode**: pass a model id plus either a PyTorch dataloader or a Hugging Face-style dataset.
+- **Supervised embeddings**: pass `(n_cal, L, D)` embeddings and labels; LOES returns the best layers for classification or regression.
+- **Label-free embeddings**: pass embeddings only; LOES ranks layers using isotropy and redundancy.
+- **Hugging Face model-id mode**: pass a model id plus either a PyTorch dataloader or a Hugging Face-style dataset.
+- **Progress and logs**: use `show_progress=True` and `verbose=True` for clean progress bars and structured run logs.
 
 ## Installation
 
@@ -78,7 +107,7 @@ from loes import select_layers_from_hf_id
 
 result = select_layers_from_hf_id(
     "bert-base-uncased",
-    dataloader=train_loader,
+    dataset=train_loader,  # dataloader=train_loader also works
     task="classification",
     k=4,
     max_calibration_samples=512,
@@ -89,7 +118,7 @@ result = select_layers_from_hf_id(
 
 The dataloader can yield `(inputs, targets)` tuples or dictionaries with model inputs and a target key such as `labels`, `label`, `targets`, `target`, or `y`.
 
-### 4. Hugging Face Model ID With A Dataset
+### 4. Hugging Face Model ID With A Hugging Face Dataset
 
 ```python
 from loes import select_layers_from_hf_id
@@ -106,7 +135,7 @@ result = select_layers_from_hf_id(
 )
 ```
 
-If the dataset is already tokenized, LOES will collate keys such as `input_ids`, `attention_mask`, `pixel_values`, or `input_values`. For raw text datasets, it uses the model tokenizer and a text column such as `text`, `sentence`, `query`, or `document`.
+`dataset` can be a Hugging Face dataset id, a loaded `Dataset`, or a `DatasetDict`; for `DatasetDict`, LOES uses the requested `split`. If the dataset is already tokenized, LOES will collate keys such as `input_ids`, `attention_mask`, `pixel_values`, or `input_values`. For raw text datasets, it uses the model tokenizer and a text column such as `text`, `sentence`, `query`, or `document`.
 
 ## Public API
 

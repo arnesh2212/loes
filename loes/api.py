@@ -635,6 +635,20 @@ def _is_torch_dataloader(value: Any) -> bool:
     return isinstance(value, DataLoader)
 
 
+def _select_dataset_split(dataset: Any, *, split: str) -> Any:
+    if isinstance(dataset, str) or _is_torch_dataloader(dataset):
+        return dataset
+    if isinstance(dataset, dict) and split in dataset:
+        split_dataset = dataset[split]
+        if hasattr(split_dataset, "__len__") and hasattr(split_dataset, "__getitem__"):
+            return split_dataset
+    if hasattr(dataset, "keys") and split in dataset:
+        split_dataset = dataset[split]
+        if hasattr(split_dataset, "__len__") and hasattr(split_dataset, "__getitem__"):
+            return split_dataset
+    return dataset
+
+
 def _build_hf_dataset_dataloader(
     dataset: Any,
     *,
@@ -915,7 +929,11 @@ def select_layers_from_hf_id(
             effective_dataloader = dataset
             dataset_metadata = "pytorch_dataloader"
         else:
-            hf_dataset = _load_hf_dataset(dataset, dataset_config_name=dataset_config_name, split=split) if isinstance(dataset, str) else dataset
+            hf_dataset = (
+                _load_hf_dataset(dataset, dataset_config_name=dataset_config_name, split=split)
+                if isinstance(dataset, str)
+                else _select_dataset_split(dataset, split=split)
+            )
             effective_dataloader = _build_hf_dataset_dataloader(
                 hf_dataset,
                 model_id=model_id,
