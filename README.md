@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# loes
 Code for paper - "Uncovering the Latent Potential of Deep Intermediate Representations" (ICML 26)
-=======
 # Uncovering the Latent Potential of Deep Intermediate Representations
 
 **LOES** is the reference implementation for **Layerwise Optimal Embedding Selection**, a lightweight module for identifying useful intermediate layers in deep models.
