@@ -214,13 +214,14 @@ You can also force `pooling="cls"`, `pooling="mean"`, or `pooling="masked_mean"`
 ## Citation
 
 ```bibtex
-@inproceedings{
-anonymous2026uncovering,
-title={Uncovering the Latent Potential of Deep Intermediate Representations},
-author={Anonymous},
-booktitle={Forty-third International Conference on Machine Learning},
-year={2026},
-url={https://openreview.net/forum?id=6up1qGJwYZ}
+@misc{batra2026uncoveringlatentpotentialdeep,
+      title={Uncovering the Latent Potential of Deep Intermediate Representations}, 
+      author={Arnesh Batra and Arush Gumber and Aniket Khandelwal and Jashn Khemani and Anubha Gupta},
+      year={2026},
+      eprint={2605.23033},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.23033}, 
 }
 ```
 
