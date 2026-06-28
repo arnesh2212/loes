@@ -30,7 +30,7 @@
 </p>
 
 <p>
-  <a href="https://arxiv.org/abs/2605.23033"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
+  <a href="https://arxiv.org/abs/2605.23033"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white"></a>
   <a href="https://openreview.net/forum?id=6up1qGJwYZ"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-paper-8c1d40?style=flat-square"></a>
   <a href="https://example.com/loes"><img alt="Project Page" src="https://img.shields.io/badge/Project-page-2f80ed?style=flat-square"></a>
   <a href="."><img alt="Code" src="https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github"></a>
